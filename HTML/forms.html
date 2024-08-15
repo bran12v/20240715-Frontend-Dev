@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <a href="index.html">Back</a>
+    <h1>Forms in HTML</h1>
+    <img src="256px-Pikachu_artwork_for_Pokémon_Red_and_Blue.webp.png" alt="Fat Pikachu">
+    <!-- Any page that is collecting and dealing with user entered data has a form -->
+
+    <form action="https://www.google.com" method="get">
+        <p> GET FORM -- Go to google.com</p>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+    <br><br>
+
+    <form action="https://www.w3schools.com/action_page.php" method="post">
+        <p>POST form -- to send data somewhere</p>
+
+        <div>
+            <label for="pokeName">Pokemon Name:</label>
+            <input type="text" id="pokeName" placeholder="Enter Name Here..." name="pokeName">
+        </div>
+        <div>
+            <label for="pokeType">Pokemon Type:</label>
+            <input type="text" name="pokeType" id="pokeType" placeholder="Enter Type Here...">
+        </div>
+        <div>
+            <label for="birthday">Pokemon Birthday:</label>
+            <input type="date" name="birthday" id="birthday">
+        </div>
+        <div>
+            <label for="genre">Favorite Genre:</label>
+            <select name="genre" id="genre">
+                <option value="rock">Rock</option>
+                <option value="R&B">R&B</option>
+                <option value="classical">Classical</option>
+                <option value="jazz">Jazz</option>
+            </select>
+        </div>
+        <button type="submit">SUBMIT</button>
+        <button type="reset">CLEAR</button>
+    </form>
+</body>
+</html>

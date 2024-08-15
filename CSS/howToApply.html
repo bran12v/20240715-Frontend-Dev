@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- There are 3 ways of using CSS -->
+    <!-- 
+        In-line styling - one off changes
+            Applied last, takes precedent
+        Internal styling - useful for styles that are only going to affect a single page
+            Applied second, overrides external, overrided by In-line
+        External styling - usually best practice when using multiple HTML pages
+            Applied first, defaults for page
+     -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        div {
+            color: aliceblue;
+            font-size: 18px;
+            padding-left: 1em;
+            padding-top: 0.5em;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <h2 style="color: aqua;">Title of page</h2>
+    <p style="color: blanchedalmond;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, itaque. Excepturi vero ad asperiores commodi, enim quidem quia ea nam rerum atque quam incidunt est non hic. <span style="color: blueviolet; font-size: 18px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Rem, molestias molestiae.</span></p>
+    <div>
+        This is one piece of page
+    </div>
+    <div>
+        This is another piece of page
+    </div>
+    <div>
+        This is the last piece of page
+    </div>
+</body>
+</html>

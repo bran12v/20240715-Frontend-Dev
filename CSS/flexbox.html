@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>
+        body {
+            background-color: cadetblue;
+        }
+        #container { /* This is for id */
+            display: flex;
+            justify-content: center; /* vertical */
+            align-items: center; /* Horizonal */ 
+            border: 2px solid black;
+            margin: 10px;
+            min-height: 1000px;
+            flex-direction: column-reverse;
+        }
+        .box { /* This is for class */
+            border: 10px solid azure;
+            margin: 10px;
+            min-height: 100px;
+            min-width: 100px;
+            text-align: center; 
+        }
+     </style>
+</head>
+<body>
+    <!-- <p>This is info</p>
+    <div>This is other info</div>
+    <h1>This is last info</h1> -->
+    <div id="container">
+        <div class="box"><h1>1</h1></div>
+        <div class="box"><h1>2</h1></div>
+        <div class="box"><h1>3</h1></div>
+        <div class="box"><h1>4</h1></div>
+        <div class="box"><h1>5</h1></div>
+        <div class="box"><h1>6</h1></div>
+    </div>
+</body>
+</html>
