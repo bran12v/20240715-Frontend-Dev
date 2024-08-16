@@ -65,3 +65,147 @@ function letFunction2() {
     }
 }
 // letFunction2();
+
+/**
+ * primatives (data types), int, decimals, char
+ * numbers
+ * string
+ * booleans
+ * null
+ * undefined
+ * BigInt
+ * Symbol
+ */
+let num = BigInt(1);
+let name1 = "Brandon Vanek"
+let name2 = Symbol("Brandon Vanek") // makes a unique value out of whatever is placed in it
+// console.log(name1 == name2);
+
+/**
+ * Booleans
+ * Truthy and Falsy
+ * you don't just have ==, you also have ===
+ * == - type coercion, try to see if the values are same
+ * === - strict equality, value AND type are taking into account
+ */
+// console.log(1 == '1')
+
+function tripleEquals(x=1, y=1) {
+    if (typeof x != typeof y) {
+        return false;
+    }
+    return x == y;
+}
+// console.log(tripleEquals())
+
+/**
+ * Operators
+ * ! - not
+ * == - equality
+ * === - strict equality
+ * != - not equal
+ * !== - not strictly equal
+ * || - logical OR
+ * && - logical AND
+ * | - bitwise OR
+ * & - bitwise AND
+ */
+
+/**
+ * Truthy and Falsy values
+ * 
+ * Falsy values are not a boolean false, but will be treated as though they were
+ * 
+ * Truthy values are literally everything else
+ * 
+ * Falsy:
+ * false
+ * 0
+ * -0
+ * 0n
+ * null
+ * undefined
+ * NaN
+ * ''
+ * 
+ * Truthy
+ * '0'
+ * true
+ * EVERYTHING ELSE
+ * []
+ * {}
+ * 42 
+ * Karl
+ * Bob
+ * This was built in 10 days --- reminder
+ */
+let boolean = Boolean(-0); // false
+
+let res = 0; // stuff coming in from API, example
+if (res) { // you are checking for a bunch of falsy values all at once
+    // not falsy
+} else {
+    // falsy
+}
+
+/**
+ * JavaScript Object Notation (JSON)
+ * Objects in js are basically just a hash map (key value pairs)
+ * dictionary, itself is immutable but the values inside are
+ */
+var keyName = "example"; 
+const person = {
+    firstName: "Brandon",
+    lastName: "Vanek",
+    age: 82,
+    email: "bvanek@skillstorm.com",
+    favColor: "Tyrian Purple or Cadet Blue", 
+    [keyName]: "The key is a variable",
+    undefined: 1,
+    null: "cheese",
+    NaN: -0,
+    getName: () => {
+        return `${person.firstName} ${person.lastName}`;
+    }
+}
+person.firstName = "Martha"; // sets
+// console.log(person.getName()); // gets
+person['date of birth'] = '08/16/24'
+// console.log(person['date of birth'])
+
+for (let props in person) {
+    // console.log(props) // all the keys
+    // console.log(person[props])// all the values
+}
+
+// console.log(Object.values(person)) // easy way
+// console.log(Object.entries(person)[0][0]) // key AND values in a 2D array
+
+Object.defineProperty(person, 'firstName', {writable: false}) // read only
+Object.defineProperty(person, 'firstName', {enumerable: false}) // doesnt show up in list (visibility)
+
+// arrays
+const myArray = [1, "2", false, {name: "Brandon"}, [1, "1"]]
+
+/**
+ * pop - remove AND return an element
+ * push - add something to the end of the array
+ * shift - remove the first element of the array
+ * unshift - add something to the beginning of the array
+ * slice - copy the array
+ * splice - by default, removes the middle element, but you can specify exactly which you'd like to remove
+ */
+const copyOfArray = myArray.slice(); // this creates a DEEP copy of the array
+
+// console.log(copyOfArray.pop()); // last item
+// console.log(copyOfArray.shift())
+// console.log(copyOfArray)
+// console.log(copyOfArray.splice(1, 1))
+// console.log(copyOfArray)
+
+function remove(index) {
+    const removedValues = this.splice(index, 1); // removes 1 value at the index
+    return removedValues;
+}
+Array.prototype.remove = remove;
+console.log(copyOfArray.remove(1))
