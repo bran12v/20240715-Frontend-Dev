@@ -1,5 +1,7 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import { Product } from "../pages/Products";
+import { useContext } from "react";
+import ThemeContext from "../contexts/themes";
 
 // in TS, all props must be defined with a type
 type ProductsTableProps = {
@@ -8,8 +10,11 @@ type ProductsTableProps = {
 
 export default function ProductsTable(props : ProductsTableProps) {
 
+    // using the context that is managaed in App.tsx
+    const theme = useContext(ThemeContext);
+
     return (
-        <>
+        <div style={theme}>
             <TableContainer>
                 <Table>
                     <TableHead>
@@ -33,6 +38,6 @@ export default function ProductsTable(props : ProductsTableProps) {
                     </TableBody>
                 </Table>
             </TableContainer>
-        </>
+        </div>
     );
 }

@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import ProductsTable from "../components/ProductsTable";
 import ProductsForm from "../components/ProductsForm";
@@ -64,9 +64,14 @@ export default function Products() {
         <>
             <Typography variant="h1">Products</Typography>
             
-            <ProductsTable productList={products} />
-
-            <ProductsForm handleNewProduct={handleNewProduct} />
+            <Grid container spacing={12}>
+                <Grid item xs={8} lg={6}>      {/** can set multiple values based on screen size: xs, sm, md, lg, xl */}
+                    <ProductsTable productList={products} />
+                </Grid>
+                <Grid item xs={4} lg={6}>
+                    <ProductsForm handleNewProduct={handleNewProduct} />
+                </Grid>
+            </Grid>
         </>
     );
 }
